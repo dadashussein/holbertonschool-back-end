@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""Documendation"""
+"""Documendation for module"""
 
 
 import requests
 import sys
 
-api_url = "https://jsonplaceholder.typicode.com/users/{}/".format(sys.argv[1])
-
 
 def fetchTodo():
     """Document for todo"""
-    req_user = requests.get(api_url)
+    url = "https://jsonplaceholder.typicode.com/users/{}/".format(sys.argv[1])
+    req_user = requests.get(url)
     req_todo = requests.get("https://jsonplaceholder.typicode.com/todos")
     user_data = req_user.json()
     todo_data = req_todo.json()
