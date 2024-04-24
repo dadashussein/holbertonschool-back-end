@@ -9,6 +9,7 @@ api_url = "https://jsonplaceholder.typicode.com/users/{}/".format(sys.argv[1])
 
 
 def fetchTodo():
+    """Document for todo"""
     req_user = requests.get(api_url)
     req_todo = requests.get("https://jsonplaceholder.typicode.com/todos")
     user_data = req_user.json()
